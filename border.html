@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding:0px;
+        box-sizing: border-box;
+
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .box{
+        position: relative;
+        width: 300px;
+        height:300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.5);
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .box::before{
+        content:'';
+        position:absolute;
+        width:200px;
+        height:160%;
+        background: linear-gradient(#00ccff,#d400d4);
+        animation: animate 2s linear infinite;
+    }
+    .box::after{
+        content:'';
+        position: absolute;
+        inset:5px;
+        background: #0e1538;
+        border-radius: 50%;
+    }
+    @keyframes animate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+
+        }
+    }
+
+    .box h2{
+        position: relative;
+        font-size: 10em;
+        color:#fff;
+        z-index: 10;
+    }
+    .boxx{
+        position: relative;
+        width: 300px;
+        height:300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.5);
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .boxx::before{
+        content:'';
+        position:absolute;
+        width:200px;
+        height:160%;
+        background: linear-gradient(#ff1b1b,#f6ff71);
+        animation: animatee 1s linear infinite;
+    }
+    .boxx::after{
+        content:'';
+        position: absolute;
+        inset:5px;
+        border-radius: 50%;
+        background: #0e1538;
+    }
+    @keyframes animatee {
+        0%{
+            transform: rotate(90deg);
+        }
+        100%{
+            transform:rotate(270deg);
+
+        }
+    }
+    .boxx h2{
+        position: relative;
+        font-size: 10em;
+        color:#fff;
+        z-index: 10;
+    }
+</style>
+<body>
+    <div class="box">
+        <h2>01</h2>
+    </div>
+    <div class="boxx">
+        <h2>02</h2>
+    </div>
+</body>
+</html>
